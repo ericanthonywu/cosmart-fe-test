@@ -46,7 +46,6 @@ The `BookList` component is a React client-side page that displays a list of boo
 2. Install dependencies:
 
     ```bash
-    Copy code
     npm install
     # or
     yarn install
@@ -55,7 +54,6 @@ The `BookList` component is a React client-side page that displays a list of boo
 3. Start the development server:
 
     ```bash
-    Copy code
     npm run dev
     # or
     yarn dev
@@ -73,7 +71,7 @@ Steps to Run Tests
     # or
     yarn test
     ```
-This will execute all test cases in the project, including the ones for the BookList component.
+   This will execute all test cases in the project, including the ones for the BookList component.
 
 2. To run tests in watch mode (for active development):
 
@@ -86,12 +84,11 @@ This will execute all test cases in the project, including the ones for the Book
 3. To check code coverage:
 
     ```bash
-    Copy code
     npm run test:coverage
     # or
     yarn test:coverage
     ```
-This will generate a coverage report that shows which parts of the code are tested.
+   This will generate a coverage report that shows which parts of the code are tested.
 
 ## Key Tests
 The following test cases are covered for the BookList component:
