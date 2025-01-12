@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BookList Component
+
+The `BookList` component is a React client-side page that displays a list of books based on a selected genre. Users can navigate between pages, book a schedule for a specific book, and set a pickup time through a popup modal.
+
+## Features
+
+- Displays a list of books with details such as title, authors, and edition count.
+- Allows users to filter books by genre using an input field.
+- Pagination to navigate through the list of books (with a configurable limit per page).
+- Popup modal to book a schedule for a specific book, allowing users to set a pickup time.
+- Integration with a `useGetBooksQuery` hook to fetch books and a `useAddScheduleMutation` hook to schedule pickups.
+
+---
+
+## Tech Stack
+
+- **React**: Core library for building the UI.
+- **Tailwind CSS**: For styling the page and components.
+- **React Query**: For managing server-state data fetching and mutations.
+- **Moment.js**: For handling date and time formatting.
+- **React Toastify**: For displaying success and error messages.
+- **Jest**: Testing framework for running unit tests.
+- **React Testing Library**: For rendering components and simulating user interactions in tests.
+
+---
+
+## Prerequisites
+
+1. Ensure you have the following installed:
+
+   - **Node.js** (version 16 or later recommended)
+   - **npm** or **yarn**
+2. Setup `.env` file with following key:
+    - NEXT_PUBLIC_API_URL=(your backend url)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+2. Install dependencies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```bash
+    Copy code
+    npm install
+    # or
+    yarn install
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    Copy code
+    npm run dev
+    # or
+    yarn dev
+    ```
+4. Open the application in your browser: http://localhost:3000
 
-## Learn More
+## Running Unit Tests
+Unit tests are written using Jest and React Testing Library to validate the functionality of the BookList component.
 
-To learn more about Next.js, take a look at the following resources:
+Steps to Run Tests
+1. Run the test suite:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    npm run test
+    # or
+    yarn test
+    ```
+This will execute all test cases in the project, including the ones for the BookList component.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. To run tests in watch mode (for active development):
 
-## Deploy on Vercel
+    ```bash
+    npm run test:watch
+    # or
+    yarn test:watch
+    ```
+   
+3. To check code coverage:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    Copy code
+    npm run test:coverage
+    # or
+    yarn test:coverage
+    ```
+This will generate a coverage report that shows which parts of the code are tested.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Key Tests
+The following test cases are covered for the BookList component:
+
+1. Rendering:
+
+   - Ensures the component renders the book list and other UI elements.
+2. Genre Filtering:
+   - Verifies that books are filtered by genre and the query is refetched when the genre changes.
+
+3. Popup Behavior:
+   - Tests the opening and closing of the schedule booking popup.
+4. Schedule Mutation:
+   - Validates the schedule creation process with proper error and success handling.
+5. Pagination:
+   - Ensures pagination buttons behave correctly.
+
+## Troubleshooting
+If you encounter issues:
+1. Dependencies: Ensure all dependencies are installed by running npm install or yarn install.
+2. Test Errors: Check the test logs for detailed error messages and resolve any missing mock setups or configurations.
+
+
+
