@@ -40,8 +40,8 @@ The `BookList` component is a React client-side page that displays a list of boo
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/ericanthonywu/cosmart-fe-test
+   cd cosmart-fe-test
    ```
 2. Install dependencies:
 
